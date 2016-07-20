@@ -19,17 +19,29 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
+        Fragment sagetFragment;
         switch (position){
             //Complete this
+            case 0:
+                sagetFragment = new PlaceholderFragment();
+                break;
+            case 1:
+                sagetFragment = new AboutFragment();
+                break;
+            case 2:
+                sagetFragment = new ContactFragment();
+                break;
+
             default: return new PlaceholderFragment();
         }
+        return sagetFragment;
 
     }
 
     @Override
     public int getCount() {
         // Show 3 total pages.
-        return mPageCount;
+        return 3;
     }
 
     @Override
@@ -37,7 +49,7 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
         switch (position){
             default:
             case 0:
-                return "PICTURE";
+                return "SAGET";
             case 1:
                 return "ABOUT ME";
             case 2:
